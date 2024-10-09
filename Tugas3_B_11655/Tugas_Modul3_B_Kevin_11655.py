@@ -51,9 +51,14 @@ st.markdown("""
 
 st.markdown("""
     <div class="center">
-        <ing src="https://media.tenor.com/oqJo9GcbfjYAAAAi/welcome-images-server.gif" alt="Welcome Image">
+        <img src="https://media.tenor.com/oqJo9GcbfjYAAAAi/welcome-images-server.gif" alt="Welcome Image">
     </div>
 """, unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Prediksi IPK - 1655</h1>", unsafe_allow_html=True)
+st.markdown("""<p style='text-align: center; color: #0073e6;'>Aplikasi ini berguna untuk memprediksi IPK berdasarkan nilai Matematika,
+                Bahasa Inggris, dan Bahasa Indonesia</p>""", unsafe_allow_html=True)
+
 
 st.sidebar.markdown("<h3 class='header-text'>Upload File dan Input Nilai</h3>", unsafe_allow_html=True)
 uploaded_file = st.sidebar.file_uploader("Upload file dataset_regresi_IPK.csv", type=["csv"])
@@ -62,8 +67,8 @@ if uploaded_file is not None:
     input_data = pd.read_csv(uploaded_file)
     st.write("<h3 style='text-align: center; color: #0073e6;'>Data yang diupload:</h3>", unsafe_allow_html=True)
 
-    model_directory = r'C:\Users\kevst\OneDrive\Documents\Kuliah\Sem 5\Pembelajaran Mesin dan Pembelajaran Mendalam\Supervised Learning (Praktek)\Model Suprevised Learning (Praktek)\Tugas3_B_11655'
-    model_path = os.path.join(model_directory, r'SVR_IPK_model.pkl')
+    #model_directory = r'C:\Users\kevst\OneDrive\Documents\Kuliah\Sem 5\Pembelajaran Mesin dan Pembelajaran Mendalam\Supervised Learning (Praktek)\Model Suprevised Learning (Praktek)\Tugas3_B_11655'
+    model_path = 'SVR_IPK_model.pkl'
 
     if os.path.exists(model_path):
         with open (model_path, 'rb') as f:
